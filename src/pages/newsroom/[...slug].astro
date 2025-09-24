@@ -1,0 +1,28 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import NewsroomPost from "../../layouts/NewsroomPost.astro"
+import client from "../../../tina/__generated__/client";
+import AdminNewsroomPost from "../../../tina/pages/AdminNewsroomPost";
+import '../../styles/blog.css';
+
+export async function getStaticPaths() {
+	const posts = await getCollection("newsroom");
+
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: {
+			post,
+			getTinaProps: async () =>
+				client.queries.newsroom({
+					relativePath: post.data.tinaInfo.relativePath,
+				}),
+		},
+	}));
+}
+
+const { post, getTinaProps } = Astro.props;
+const tinaProps = await getTinaProps();
+---
+<NewsroomPost {...tinaProps}>
+	<AdminNewsroomPost {...tinaProps} client:tina/>
+</NewsroomPost>

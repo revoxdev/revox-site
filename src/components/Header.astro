@@ -1,0 +1,415 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import config from "../content/config/config.json";
+import IconLink from "./react/IconLink";
+---
+
+<div
+  data-collapse="medium"
+  data-animation="default"
+  data-duration="400"
+  data-easing="ease"
+  data-easing2="ease"
+  role="banner"
+  class="navbar-wrapper w-nav"
+>
+  <div class="navbar">
+    <div class="container fluid nav">
+      <a
+        href="index.html"
+        aria-current="page"
+        class="brand-mobile w-nav-brand w--current"
+        ><img
+          src="images/logo.svg"
+          loading="lazy"
+          alt="Revox Logo"
+          height="26"
+        /></a
+      >
+      <nav role="navigation" class="menu w-nav-menu">
+        <div class="menu-left">
+          <a
+            href="index.html"
+            aria-current="page"
+            class="brand w-nav-brand w--current"
+            ><img
+              src="images/logo.svg"
+              loading="lazy"
+              width="116"
+              height="26"
+              alt="Revox Logo"
+              class="logo"
+            /></a
+          >
+          <a
+            href="/index"
+            aria-current="page"
+            class="dropdown-toggle w-nav-link w--current">Discover</a
+          >
+          <a href="/services" class="dropdown-toggle w-nav-link">Services</a>
+          <div
+            data-hover="false"
+            data-delay="0"
+            class="dropdown hidden w-dropdown"
+          >
+            <div class="dropdown-toggle w-dropdown-toggle">
+              <div class="dropdown-toggle-text">Products</div>
+              <div class="caret w-embed">
+                <svg
+                  width="10px"
+                  height="10px"
+                  viewbox="0 0 32 32"
+                  style="display: block"
+                >
+                  <use xlink:href="#caret" fill="#b7bfc6"></use>
+                </svg>
+              </div>
+            </div>
+            <nav class="dropdown-list w-dropdown-list">
+              <div class="dropdown-overflow">
+                <div class="dropdown-inner-shadow"></div>
+                <div class="dropdown-bg">
+                  <div class="dropdown-bg-full"></div>
+                  <div class="dropdown-sidebar-bg"></div>
+                </div>
+                <div class="dropdown-list-body">
+                  <div class="container">
+                    <div class="dropdown-grid">
+                      <div class="dropdown-column first">
+                        <div class="dropdown-column-title">Resumen</div>
+                        <a href="#" class="dropdown-card w-inline-block">
+                          <div class="dropdown-card-bg purple"></div>
+                          <div class="dropdown-card-content">
+                            <div class="dropdown-card-title">Resumen</div>
+                            <p class="dropdown-card-text">
+                              Crea planes de proyectos, coordina tareas y cumple
+                              con los vencimientos
+                            </p>
+                          </div>
+                        </a>
+                        <a href="#" class="dropdown-card w-inline-block">
+                          <div class="dropdown-card-bg purple"></div>
+                          <div class="dropdown-card-content">
+                            <div class="dropdown-card-title">
+                              Integraciones con aplicaciones
+                            </div>
+                            <p class="dropdown-card-text">
+                              Conéctate con las herramientas que adoras y en las
+                              que confías a diario
+                            </p>
+                          </div>
+                        </a>
+                        <a href="#" class="dropdown-card w-inline-block">
+                          <div class="dropdown-card-bg purple"></div>
+                          <div class="dropdown-card-content">
+                            <div class="dropdown-card-title">Clientes</div>
+                            <p class="dropdown-card-text">
+                              Mira cómo Asana ayuda a los equipos a alcanzar sus
+                              objetivos
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="dropdown-column second">
+                        <div class="dropdown-column-title">Funciones</div>
+                        <div class="dropdown-subgrid">
+                          <div>
+                            <a
+                              href="#"
+                              class="dropdown-card has-icon w-inline-block"
+                            >
+                              <div class="dropdown-card-bg purple"></div>
+                              <div class="svg-use w-embed">
+                                <svg viewbox="0 0 32 32">
+                                  <use xlink:href="#objectives" fill="#796EFF"
+                                  ></use>
+                                </svg>
+                              </div>
+                              <div class="dropdown-card-content">
+                                <div class="dropdown-card-title">Objetivos</div>
+                                <p class="dropdown-card-text">
+                                  Define los objetivos estratégicos y dales
+                                  seguimiento a todos en un solo lugar
+                                </p>
+                              </div>
+                            </a>
+                            <a
+                              href="#"
+                              class="dropdown-card has-icon w-inline-block"
+                            >
+                              <div class="dropdown-card-bg is-green"></div>
+                              <div class="dropdown-card-icon w-embed">
+                                <svg viewbox="0 0 32 32">
+                                  <use xlink:href="#cronogram" fill="#25e8c8"
+                                  ></use>
+                                </svg>
+                              </div>
+                              <div class="dropdown-card-content">
+                                <div class="dropdown-card-title">
+                                  Cronograma
+                                </div>
+                                <p class="dropdown-card-text">
+                                  Crea un hermoso diagrama de Gantt en minutos
+                                </p>
+                              </div>
+                            </a>
+                            <a
+                              href="#"
+                              class="dropdown-card has-icon w-inline-block"
+                            >
+                              <div class="dropdown-card-bg is-blue"></div>
+                              <div class="dropdown-card-icon w-embed">
+                                <svg viewbox="0 0 32 32">
+                                  <use xlink:href="#portfolio" fill="#14aaf5"
+                                  ></use>
+                                </svg>
+                              </div>
+                              <div class="dropdown-card-content">
+                                <div class="dropdown-card-title">
+                                  Portafolios
+                                </div>
+                                <p class="dropdown-card-text">
+                                  Supervisa el progreso y el estado de las
+                                  iniciativas clave en tiempo real
+                                </p>
+                              </div>
+                            </a>
+                            <a
+                              href="#"
+                              class="dropdown-card has-icon w-inline-block"
+                            >
+                              <div class="dropdown-card-bg is-red"></div>
+                              <div class="dropdown-card-icon w-embed">
+                                <svg viewbox="0 0 32 32">
+                                  <use xlink:href="#resources" fill="#ff5263"
+                                  ></use>
+                                </svg>
+                              </div>
+                              <div class="dropdown-card-content">
+                                <div class="dropdown-card-title">
+                                  Gestión de recursos
+                                </div>
+                                <p class="dropdown-card-text">
+                                  Mira cuánto trabajo tienen los miembros de tu
+                                  equipo en todos los proyectos
+                                </p>
+                              </div>
+                            </a>
+                          </div>
+                          <div>
+                            <a
+                              href="#"
+                              class="dropdown-card has-icon w-inline-block"
+                            >
+                              <div class="dropdown-card-bg orange"></div>
+                              <div class="dropdown-card-icon w-embed">
+                                <svg viewbox="0 0 32 32">
+                                  <use xlink:href="#forms" fill="#ff7f00"></use>
+                                </svg>
+                              </div>
+                              <div class="dropdown-card-content">
+                                <div class="dropdown-card-title">
+                                  Formularios
+                                </div>
+                                <p class="dropdown-card-text">
+                                  Envía y gestiona las solicitudes de trabajo en
+                                  un solo lugar
+                                </p>
+                              </div>
+                            </a>
+                            <a
+                              href="#"
+                              class="dropdown-card has-icon w-inline-block"
+                            >
+                              <div class="dropdown-card-bg is-yellow"></div>
+                              <div class="dropdown-card-icon w-embed">
+                                <svg viewbox="0 0 32 32">
+                                  <use xlink:href="#automation" fill="#fcbd01"
+                                  ></use>
+                                </svg>
+                              </div>
+                              <div class="dropdown-card-content">
+                                <div class="dropdown-card-title">
+                                  Automatización
+                                </div>
+                                <p class="dropdown-card-text">
+                                  Simplifica los procesos, reduce las
+                                  posibilidades de error y dedica menos tiempo a
+                                  las tareas rutinarias.
+                                </p>
+                              </div>
+                            </a>
+                            <a
+                              id="w-node-_1e642f38-86c7-4291-4e31-a108dc7278a4-dc72783b"
+                              href="#"
+                              class="dropdown-card has-icon w-inline-block"
+                            >
+                              <div class="dropdown-card-bg purple"></div>
+                              <div class="dropdown-card-icon w-embed">
+                                <svg viewbox="0 0 32 32">
+                                  <use xlink:href="#cog" fill="#796eff"></use>
+                                </svg>
+                              </div>
+                              <div class="dropdown-card-content">
+                                <div class="dropdown-card-title not-margin">
+                                  Mira todas las funciones
+                                </div>
+                              </div>
+                              <div class="dropdown-card-icon arrow w-embed">
+                                <svg
+                                  viewbox="0 0 14 11"
+                                  preserveaspectratio="xMinYMin"
+                                  style="fill: #646f79"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M9.827.144L9.019.86l3.256 3.738H0V5.69h12.275L9.02 9.427l.808.717 4.173-5-4.173-5z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-column third">
+                        <div class="sidebar-column-bg"></div>
+                        <div class="dropdown-column-title">
+                          Todos Los planes
+                        </div>
+                        <a
+                          href="#"
+                          class="dropdown-card has-icon w-inline-block"
+                        >
+                          <div class="dropdown-card-bg white"></div>
+                          <div class="dropdown-card-icon w-embed">
+                            <svg viewbox="0 0 32 32">
+                              <use xlink:href="#basic" fill="#646f79"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown-card-content">
+                            <div class="dropdown-card-title">Basic</div>
+                            <p class="dropdown-card-text">
+                              Para que la gestión de proyectos y tareas sea más
+                              sencilla. Gratis para equipos de hasta 15
+                              integrantes.
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="dropdown-card has-icon w-inline-block"
+                        >
+                          <div class="dropdown-card-bg white"></div>
+                          <div class="dropdown-card-icon w-embed">
+                            <svg viewbox="0 0 32 32">
+                              <use xlink:href="#premium" fill="#fcbd01"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown-card-content">
+                            <div class="dropdown-card-title">Premium</div>
+                            <p class="dropdown-card-text">
+                              Para una planificación y gestión efectivas de los
+                              proyectos de tus equipos.
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="dropdown-card has-icon w-inline-block"
+                        >
+                          <div class="dropdown-card-bg white"></div>
+                          <div class="dropdown-card-icon w-embed">
+                            <svg viewbox="0 0 32 32">
+                              <use xlink:href="#business" fill="#14aaf5"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown-card-content">
+                            <div class="dropdown-card-title">Business</div>
+                            <p class="dropdown-card-text">
+                              Para la gestión de iniciativas a gran escala y la
+                              mejora de la colaboración entre los equipos.
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="dropdown-card has-icon w-inline-block"
+                        >
+                          <div class="dropdown-card-bg white"></div>
+                          <div class="dropdown-card-icon w-embed">
+                            <svg viewbox="0 0 32 32">
+                              <use xlink:href="#cronogram" fill="#ff5263"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown-card-content">
+                            <div class="dropdown-card-title">Enterprise</div>
+                            <p class="dropdown-card-text">
+                              Para organizaciones que necesitan seguridad,
+                              control y asistencia extra.
+                            </p>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="dropdown-card has-icon w-inline-block"
+                        >
+                          <div class="dropdown-card-bg white"></div>
+                          <div class="dropdown-card-icon w-embed">
+                            <svg viewbox="0 0 32 32">
+                              <use xlink:href="#cog" fill="#796eff"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown-card-content">
+                            <div class="dropdown-card-title not-margin">
+                              Compara todos lo planes
+                            </div>
+                          </div>
+                          <div class="dropdown-card-icon arrow w-embed">
+                            <svg
+                              viewbox="0 0 14 11"
+                              preserveaspectratio="xMinYMin"
+                              style="fill: #646f79"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M9.827.144L9.019.86l3.256 3.738H0V5.69h12.275L9.02 9.427l.808.717 4.173-5-4.173-5z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <a href="/work" class="dropdown-toggle w-nav-link">Our Work</a>
+          <a href="http://foxtale.studio/" class="dropdown-toggle w-nav-link"
+            >Games</a
+          >
+          <a href="/about" class="dropdown-toggle w-nav-link">Company</a>
+
+          <a href="/newsroom" class="dropdown-toggle w-nav-link">News</a>
+        </div>
+        <div class="menu-right">
+          <a href="/contact" class="dropdown-toggle login w-nav-link"
+            >Contact us</a
+          >
+          <div class="dropdown-toggle button-cta">
+            <a
+              href="https://calendly.com/hello-rvx/30min"
+              class="nav-button w-button">Book a FREE Audit</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="menu-button-line top"></div>
+        <div class="menu-button-line middle"></div>
+        <div class="menu-button-line last"></div>
+      </div>
+    </div>
+  </div>
+  <div id="asn-navbar-bg" class="navbar-bg"></div>
+</div>

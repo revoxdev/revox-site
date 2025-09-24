@@ -1,0 +1,69 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import config from '../../content/config/config.json';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import '../../styles/blog.css';
+
+const posts = (await getCollection('project')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const metadata = {
+  title: 'Projects - Latest Updates and Announcements',
+  description: 'Stay informed with the latest news, events, and updates from the Old Anandians&#x27; Professional Forum (OAPF). Explore our newsroom for insights into our initiatives and community impact.'
+};
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={metadata.title} description={metadata.description} />
+		<style>
+			main {
+				width: 960px;
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
+		</style>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<Header />
+		<section class="container d-flex align-items-center" style="padding-top: 30px; background-color: #fff;">
+			<div class="grid-container">
+				{
+					posts.map((post) => (
+						<article >
+							<a class="d-flex flex-column text-dark gap-4" href={`/project/${post.id}`} style="text-decoration: none;">
+								{post.data.heroImage ? (
+								<img
+									srcSet={[post.data.heroImage ? `${post.data.heroImage} 600w` : ''].toString()}
+									src={post.data.heroImage}
+									alt={post.data.title}
+									loading="lazy"
+									class="d-flex border overflow-hidden"
+									style="border-radius: 8px; aspect-ratio: 2.25 / 1; max-height: 560px"
+								/>
+								) : null}
+								{post.data.pubDate && <div class="date-text"><FormattedDate className="date-text" date={post.data.pubDate} /></div>}
+								{post.data.title && <h2 style="color: #343A40; font-size: 2rem; font-weight: 500; line-height: 2.2rem; letter-spacing: -0.04rem;" set:html={post.data.title} />}
+								{post.data.description && <p style="margin-top:10px; color: #000; font-size: 0.9375rem; line-height: 1.25rem;" set:html={post.data.description} />}
+							</a>
+						</article>
+					))
+				}
+			</div>
+		</section>
+		<hr>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,771 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import config from '../content/config/config.json';
+import client from '../../tina/__generated__/client';
+
+
+const metadata = {
+  title: "Revox - We build software and games",
+  description:
+    "We are a Digital Product Game Development agency based in Colombo, Sri Lanka. We create disruptive change by crafting best-in-class digital products ventures.",
+};
+---
+
+<!doctype html>
+<html
+  data-wf-page="65ca4315861aab22cbbeb81c"
+  data-wf-site="65afaef75b2da61f9662587d"
+  lang="en"
+>
+	<head>
+		<BaseHead title={metadata.title} description={metadata.description} />
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<Header />		
+			<main class="main-wrapper">
+			 <section class="section-top">
+    <div data-poster-url="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ca4473b7ed9682c86b80d0_revox-about-hero-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ca4473b7ed9682c86b80d0_revox-about-hero-transcode.mp4,https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ca4473b7ed9682c86b80d0_revox-about-hero-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="about-video w-background-video w-background-video-atom"><video id="cbbd4f93-2345-c51c-c1ea-97033d575db4-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ca4473b7ed9682c86b80d0_revox-about-hero-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+        <source src="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ca4473b7ed9682c86b80d0_revox-about-hero-transcode.mp4" data-wf-ignore="true">
+        <source src="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ca4473b7ed9682c86b80d0_revox-about-hero-transcode.webm" data-wf-ignore="true">
+      </video>
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="flex-v mx-w-40">
+          <div>
+            <div class="overline text-white">About Us</div>
+            <h1 class="heading-3 text-white">Hey, We are Revox, <br>We do the hard things to drive the future of tomorrow</h1>
+          </div>
+          <div class="p large text-white">We are a global digital product &amp; UX agency focusing on new cutting edge technologies of web and mobile. We create disruptive change using best-in-class digital products &amp; ventures.</div>
+          <div class="p large hint-text text-white">Scroll down to see why we are the elites.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section p-60">
+    <div class="w-layout-blockcontainer container col-container p-b-40 w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div id="w-node-d62bd032-ab12-dc14-bd14-b39c086ef778-cbbeb81c" class="p-r-20">
+            <div class="overline">APPROACH</div>
+            <h3 class="heading-3">Humans and emotions come first. We build technology keeping this in mind!</h3>
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <div id="w-node-d62bd032-ab12-dc14-bd14-b39c086ef77e-cbbeb81c" class="p large m-t-40">Technology can be complicated sometimes. It has its own ecosystem, its own language, and it’s just difficult to understand how it works. Some of us humans may not get it easily. This is why our core value is to build an intimate and intricate connection between technology and humans. After all tech is built to help humans. <br><br>Our technology is for everyone. Our tech is humanly familiar. This is perhaps what we thrive the most, which makes us different from the other traditional agencies. We care deeply about helping you tackle your most significant challenges and turn your vision into reality, keeping the end-user in mind at all times. With us, it’s never just about the project in hand. It’s about building trust and enabling your long-term success. We will meet you where you are on your journey, integrate our people with yours, and share our skills every step of the way to make the product you envisioned a reality.</div>
+          <a href="work.html" class="btn-text m-t-20 w-button">See our work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="overflow p-70 bg-grey">
+    <div class="container">
+      <div class="overline">Milestones &amp; Achievements.<br></div>
+    </div>
+    <div class="timeline-line"></div>
+    <div>
+      <div class="fader grey"></div>
+      <div class="realative w-container">
+        <div class="splide slider1">
+          <div class="splide__track">
+            <div class="splide__list timeline">
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-line-centre"></div>
+                  <div class="timeline-date">2013-11</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Released our first exclusive product Webarch.</div>
+                    <div class="p small hint-text">This is the milestone par excellence which heralds our accession.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2014-01</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Founded Revox Private Limited.</div>
+                    <div class="p small hint-text">Incorporated Revox as a business entity in the democratic socialist republic of Sri Lanka</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2014-12</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Released Pages Dashboard UI Framework.</div>
+                    <div class="p small hint-text">An Exclusive UX/UI tool made in hope to uplift the UI/UX in dashboard designs industry.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2014-12</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Made it to the Authors’ Hall of Fame.</div>
+                    <div class="p small hint-text">Sri Lanka’s first featured Elite author award won from envato themeforest.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2015-01<br></div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Became week’s featured author</div>
+                    <div class="p small hint-text">Made it to the Themeforest featured authors’ section.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2016-03</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Became Weekly Top Seller.</div>
+                    <div class="p small hint-text">Had items that are ranked among the weekly top sellers across the entire world marketplace</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2017-08</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Expanded to new spaces.</div>
+                    <div class="p small hint-text">New Office open in Sri Lanka Nugegoda.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2017-11</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Became Part of the $1 Million community earnings milestone</div>
+                    <div class="p small hint-text">Revox became a part of the $1 million community earning in Envato Themeforest marketplace.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2018-08</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Expanded our teams</div>
+                    <div class="p small hint-text">Hired more expertise and expanded our team.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2019-10</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Released Kepler - Flagship Product</div>
+                    <div class="p small hint-text">Released our flagship; A drag n’ drop WordPress Website Builder that showcases our core capabilities.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2020-01</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Introduced our services tiers.</div>
+                    <div class="p small hint-text">Revox opened up consulting and outsourcing services to help people build more and more digital products.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2021-02</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Opened Game Studio</div>
+                    <div class="p small hint-text">Revox launched a subsidiary game studio named Rundown Studios.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="timeline-date">2023-01</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Expanded fields of expertise</div>
+                    <div class="p small hint-text">Revox has expanded their expertise in 5 different industries including, Ed-tech, Health care, Gambling, Fin-Tech, Ecommerce and Gaming</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="timeline-card">
+                  <div class="overline timeline">NEXT</div>
+                  <div class="div-block-2">
+                    <div class="text-lg">Your next voice idea, or brand.</div>
+                    <div class="p small hint-text">We care deeply about helping you tackle your biggest challenges and turn your vision into reality.</div>
+                  </div>
+                  <div class="timeline-line-centre"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="splide__arrows">
+            <a href="#" class="splide__arrow splide__arrow--prev w-button"></a>
+            <a href="#" class="splide__arrow splide__arrow--next w-button"></a>
+            <div class="hidden">
+              <div class="splide__pagination">
+                <div class="splide__pagination__page"></div>
+                <div class="splide__pagination__page is-active"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section p-70">
+    <div class="w-layout-blockcontainer container col-container w-container">
+      <div class="w-row">
+        <div class="w-col w-col-5">
+          <div id="w-node-_487a8270-9380-286b-a7c2-0d40ccea216f-cbbeb81c" class="p-r-20">
+            <div class="overline">WHAT WE BELIEVE</div>
+            <h3 class="heading-5">We believe technology &amp; design together has the power to create transformation change</h3>
+          </div>
+          <div id="w-node-_34095b3a-970f-4728-02e9-c87d951f80a8-cbbeb81c" class="p large">From the word go, we did things differently. Instead of a gruelling, up-or-out career, we offered balance and sanity (much needed in this day and age). We value work-life balance and believe that balance brings out the best in you both professionally and personally.</div>
+        </div>
+        <div class="full-h w-col w-col-7">
+          <div class="team-card">
+            <div class="float-card">
+              <div class="w-layout-grid grid-2">
+                <h5 id="w-node-d5e47ec8-d78b-6832-8d40-2efa813c3707-cbbeb81c" class="heading-7 m-0">Inclusion &amp; Diveristy</h5>
+                <div id="w-node-b307e920-4a18-c400-efd8-7e81c5d400c2-cbbeb81c" class="p hint-text">We embrace a diversity of people and views. This makes us better and means better outcomes for our clients.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section p-t-20">
+    <div class="w-layout-blockcontainer container col-container w-container">
+      <div class="columns p-t-40 w-row">
+        <div class="w-col w-col-4 w-col-stack w-col-small-small-stack">
+          <div class="p-r-20">
+            <div class="overline color-blue-70">Our Core Values</div>
+            <h3 class="heading-5 color-blue-70 m-b-30">Our core values are an active part of everything we do. Each one reminds us to stay true to ourselves while driving amazing outcomes for our products and clients.</h3>
+          </div>
+        </div>
+        <div class="w-col w-col-8 w-col-stack w-col-small-small-stack">
+          <div class="w-layout-hflex flex-v">
+            <div class="values-card">
+              <h4 class="heading-6 value-title">Yin and Yang</h4>
+              <div class="p">We believe that balance is a very crucial part in almost every aspect of what we build. We believe that things exist cause the other opposite exist.</div>
+            </div>
+            <div class="values-card">
+              <h4 class="heading-6 value-title">A Closed Circuit</h4>
+              <div class="p">People have a propensity to spend more time when lots of choices are given which creates frustration. We make sure that we reduce that paradox of choice, by selecting the best preferred choices.</div>
+            </div>
+            <div class="values-card">
+              <h4 class="heading-6 value-title">Invisible design.</h4>
+              <div class="p">Every product should naturally foster human perceptions. Either it’s physical or digital, they should feel natural and familiar to use.</div>
+            </div>
+            <div class="values-card">
+              <h4 class="heading-6 value-title">Design is the bridge between humans and machines</h4>
+              <div class="p">Us at Revox spend a great deal of time trying to craft products that humans naturally feel familiar.</div>
+            </div>
+            <div class="values-card">
+              <h4 class="heading-6 value-title">Inspire passion and adventure.</h4>
+              <div class="p">We continuously inspire and motivate our teams to find their true capabilities and passion. To start something thats owned and managed by them.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="p-40">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="overline text-center">THE FORERUNNERS</div>
+      <h1 class="heading-4 text-center">Built from scratch. <br>Built with love.</h1>
+      <div class="m-team-wrapper">
+        <div class="profile-wrapper"><img src="images/pasindu-hatanachchige-revox.webp" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture">
+          <div class="profile-title-wrapper">
+            <div class="profile-title">Pasindu Hatanachchige</div>
+            <div class="p text-center">Co-Founder / Managing Partner</div>
+          </div>
+        </div>
+        <div class="profile-wrapper"><img src="images/dinuka-revox.webp" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture">
+          <div class="profile-title-wrapper">
+            <div class="profile-title">Dinuka Hatanachchige</div>
+            <div class="p text-center">Co-Founder / Managing Partner</div>
+          </div>
+        </div>
+        <div class="profile-wrapper"><img src="images/kevin-jin-revox.webp" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture">
+          <div class="profile-title-wrapper">
+            <div class="profile-title">Kevin (Taeyoon) Jin</div>
+            <div class="p text-center">Managing Partner / Chief Technology Officer</div>
+          </div>
+        </div>
+        <div class="profile-wrapper"><img src="images/praveena-revox.webp" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture">
+          <div class="profile-title-wrapper">
+            <div class="profile-title">Praveena Sarathchandra</div>
+            <div class="p text-center">Head of Technology and Research</div>
+          </div>
+        </div>
+        <div class="profile-wrapper"><img src="images/john-revox.webp" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture">
+          <div class="profile-title-wrapper">
+            <div class="profile-title">John Perera</div>
+            <div class="p text-center">Head of Game Development</div>
+          </div>
+        </div>
+        <div class="profile-wrapper">
+          <div class="p-radius-full"><img src="images/T0C49SBJL-U072S5H643S-0647b5d12f57-512-1_1.avif" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture"></div>
+          <div class="profile-title-wrapper">
+            <div class="profile-title">Yomal Gunarathna</div>
+            <div class="p text-center">Head of Design</div>
+          </div>
+        </div>
+        <div class="profile-wrapper"><img src="images/roshan-revox.webp" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture">
+          <div class="profile-title-wrapper">
+            <div class="profile-title">Roshan De Selfa</div>
+            <div class="p text-center">Head of Art</div>
+          </div>
+        </div>
+        <div class="profile-wrapper"><img src="images/jayantha-revox.webp" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture">
+          <div class="profile-title-wrapper">
+            <div class="profile-title">Anura Jayantha  </div>
+            <div class="p text-center">Head of Finance</div>
+          </div>
+        </div>
+        <div class="profile-wrapper"><img src="images/lochlin-revox.webp" loading="lazy" width="209" style="opacity:0" alt="" class="p-picture">
+          <div class="profile-title-wrapper">
+            <div class="profile-title">Lochlin Vincent</div>
+            <div class="p text-center">Human Resources</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-black p-t-40 p-b-20">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="w-layout-hflex flex-h center">
+        <h3 class="heading-6 text-center text-white">Memories and stories<br>we&#x27;ve shared.</h3>
+      </div>
+    </div>
+  </section>
+  <div class="slide-container">
+    <div class="w-embed">
+      <style>
+.slick-slide {
+	outline: none !important;
+}
+.slick-dotted.slick-slider {
+	margin-bottom: 0 !important;
+}
+.slick-center {
+	transform: scale(1);
+	opacity: 1;
+	transition: all 0.2s;
+	-webkit-transform: scale(1);   
+}
+.slide-item-wrapper:focus {
+  outline: transparent none 0;
+  outline-color: transparent;
+  outline-style: none;
+  outline-width: 0;
+}
+.slick-track {
+	margin: 0;
+}
+.slide-items {
+	display: flex !important;
+}
+.slick-list, .slick-slider, .slick-track {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: auto;		  
+}
+.slide-prev, .slide-next {
+	display: flex !important;
+}
+.slide-prev.slick-disabled, .slide-next.slick-disabled {
+	opacity: 0 !important;
+	display: none !important;
+}
+.slick-dots {
+	padding: 0 10px;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+	max-width: 50vw;
+  transform: translateX(-50%);
+  list-style: none; 
+  text-align: center;
+  background: transparent;
+	display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  z-index: 1;
+}
+.slick-dots li {
+	  position:relative;
+    list-style: none;
+    width:100%;
+		max-width:100px;
+    height: 4px;
+    margin-right: 0 0 5px 0;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100px;
+    transition: all 0.2s;
+		transition-timing-function: linear;
+}
+.slick-dots li:last-of-type {
+	margin-right: 0;
+}
+.slick-dots li:hover {
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.slick-dots li button {
+	position:absoulute;
+	padding: 0 !important;
+	top: 0;
+  left 0;
+  width: 100% ;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent ;
+  background-color: white;
+}
+.slick-dots li.slick-active button {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-animation: activeNav 10.5s forwards; 
+  animation: activeNav 10.5s  forwards;
+  transition-timing-function: linear;
+}
+.slick-dots li button:before {
+  display: none;
+  content: '';
+  position:absoulute;
+  top: 0;
+  left 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  background: transparent ;
+}
+@keyframes activeNav {
+  0% {
+    width : 0;
+  }
+  100% {
+    width :  100%;
+  }
+}
+/*Responsive tablet view*/
+@media only screen and (max-width: 991px) {
+ .slick-dots {
+     max-width: 75vw;
+     }
+}
+/*Responsive mobile view*/
+@media only screen and (max-width: 767px) {
+.slide-prev.desktop-arrow, .slide-next.desktop-arrow {
+	opacity: 0 !important;
+	display: none !important;
+}
+		.slick-dots{
+      position: absolute !important;
+      top: 18px;
+      left: 0;
+      transform: translateX(0);
+      z-index: 999999999;
+      height: 5px; 
+      max-width: 100%;
+	/*Layouts mobile*/
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(2px, 1fr) );
+      grid-gap: 5px;
+	}
+.slick-dots li{
+  width: 100%;
+  margin: 0;
+}
+.slick-track {
+   height: 100%;
+}
+.slick-list, .slick-slider, .slick-track {
+		height: 100%;
+}
+}
+</style>
+    </div>
+    <div class="wrapper">
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="content-wrapper"><img src="images/play-expo-2_1.avif" alt="" class="image">
+            <div class="story-desc">
+              <div class="p text-white">Revox participated Sri Lanka&#x27;s largest youth expo for tech and games.</div>
+            </div>
+          </div>
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="content-wrapper"><img src="images/halloween_1.avif" alt="" class="image">
+            <div class="story-desc">
+              <div class="p text-white">Revox Trick or Treat Costume Halloween Party  </div>
+            </div>
+          </div>
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+          <div class="content-wrapper">
+            <div data-poster-url="videos/anniversary-poster-00001.jpg" data-video-urls="videos/anniversary-transcode.mp4,videos/anniversary-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="bg-story w-background-video w-background-video-atom"><video id="f90daf0f-6b84-2c19-dff7-ae3f843bdf2f-video" autoplay="" loop="" style="background-image:url(&quot;videos/anniversary-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="videos/anniversary-transcode.mp4" data-wf-ignore="true">
+                <source src="videos/anniversary-transcode.webm" data-wf-ignore="true">
+              </video></div>
+            <div class="story-desc">
+              <div class="p text-white">Celebrating 11 years of excellence at revox</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="inner-swipe">
+            <div class="slide-prev mobile-prev"></div>
+            <div class="slide-next mobile-next"></div>
+          </div>
+          <div class="content-wrapper">
+            <div data-poster-url="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce0cedb02cac9d9299e241_sponsor-event-revox-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce0cedb02cac9d9299e241_sponsor-event-revox-transcode.mp4,https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce0cedb02cac9d9299e241_sponsor-event-revox-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="bg-story w-background-video w-background-video-atom"><video id="f90daf0f-6b84-2c19-dff7-ae3f843bdf39-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce0cedb02cac9d9299e241_sponsor-event-revox-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce0cedb02cac9d9299e241_sponsor-event-revox-transcode.mp4" data-wf-ignore="true">
+                <source src="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce0cedb02cac9d9299e241_sponsor-event-revox-transcode.webm" data-wf-ignore="true">
+              </video></div>
+          </div>
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+          <div class="content-wrapper">
+            <div data-poster-url="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce05ca81979b6d0bca43c4_revox-live-to-love-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce05ca81979b6d0bca43c4_revox-live-to-love-transcode.mp4,https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce05ca81979b6d0bca43c4_revox-live-to-love-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="bg-story w-background-video w-background-video-atom"><video id="f90daf0f-6b84-2c19-dff7-ae3f843bdf47-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce05ca81979b6d0bca43c4_revox-live-to-love-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce05ca81979b6d0bca43c4_revox-live-to-love-transcode.mp4" data-wf-ignore="true">
+                <source src="https://uploads-ssl.webflow.com/65afaef75b2da61f9662587d/65ce05ca81979b6d0bca43c4_revox-live-to-love-transcode.webm" data-wf-ignore="true">
+              </video></div>
+            <div class="story-desc">
+              <div class="p text-white">Main Sponsor for one of the biggest Sri Lankan musical Event.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+          <div class="content-wrapper">
+            <div data-poster-url="videos/Revox-Christmas-720-poster-00001.jpg" data-video-urls="videos/Revox-Christmas-720-transcode.mp4,videos/Revox-Christmas-720-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="bg-story w-background-video w-background-video-atom"><video id="f90daf0f-6b84-2c19-dff7-ae3f843bdf53-video" autoplay="" loop="" style="background-image:url(&quot;videos/Revox-Christmas-720-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="videos/Revox-Christmas-720-transcode.mp4" data-wf-ignore="true">
+                <source src="videos/Revox-Christmas-720-transcode.webm" data-wf-ignore="true">
+              </video></div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="content-wrapper"><img src="images/christmas_1.avif" alt="" class="image"></div>
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+          <div class="content-wrapper">
+            <div data-poster-url="videos/happy-new-year-revox-poster-00001.jpg" data-video-urls="videos/happy-new-year-revox-transcode.mp4,videos/happy-new-year-revox-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="bg-story w-background-video w-background-video-atom"><video id="f90daf0f-6b84-2c19-dff7-ae3f843bdf65-video" autoplay="" loop="" style="background-image:url(&quot;videos/happy-new-year-revox-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="videos/happy-new-year-revox-transcode.mp4" data-wf-ignore="true">
+                <source src="videos/happy-new-year-revox-transcode.webm" data-wf-ignore="true">
+              </video></div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+          <div class="content-wrapper">
+            <div data-poster-url="videos/play-expo-f-poster-00001.jpg" data-video-urls="videos/play-expo-f-transcode.mp4,videos/play-expo-f-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="bg-story w-background-video w-background-video-atom"><video id="f90daf0f-6b84-2c19-dff7-ae3f843bdf6e-video" autoplay="" loop="" style="background-image:url(&quot;videos/play-expo-f-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="videos/play-expo-f-transcode.mp4" data-wf-ignore="true">
+                <source src="videos/play-expo-f-transcode.webm" data-wf-ignore="true">
+              </video></div>
+            <div class="story-desc">
+              <div class="p text-white">Sri Lanka&#x27;s largest youth expo celebrating the best of gaming, technology and innovation featuring the Colombo Comic Expo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="content-wrapper"><img src="images/g-a-d.webp" alt="Revox Accessibility" sizes="(max-width: 616px) 100vw, 616px" srcset="images/g-a-d-p-500.jpg 500w, images/g-a-d.webp 616w" class="image">
+            <div class="story-desc">
+              <div class="p text-white">Celebrating equal access for the internet and technology.</div>
+            </div>
+          </div>
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="slide-item-wrapper">
+          <div class="content-wrapper"><img src="images/dansala.webp" alt="Revox Dansala" sizes="(max-width: 616px) 100vw, 616px" srcset="images/dansala-p-500.jpg 500w, images/dansala.webp 616w" class="image">
+            <div class="story-desc">
+              <div class="p text-white">Ice cream give-away gave smiles to over 4,000 people around the city.</div>
+            </div>
+          </div>
+          <div class="inner-swipe">
+            <div>
+              <div class="slide-prev mobile-prev"></div>
+            </div>
+            <div>
+              <div class="slide-next mobile-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-next desktop-arrow"><img src="images/download.svg" loading="lazy" alt="" class="image-26"></div>
+    <div class="slide-prev desktop-arrow"><img src="images/download-1.svg" loading="lazy" alt="" class="image-26"></div>
+  </div>
+  <section class="p-b-60 bg-l-blue">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="w-layout-grid grid-contact-mini">
+        <div>
+          <div class="overline">ARE YOU VISITING?</div>
+          <h1 class="heading-5">We have a thriving office and a friendly team of experts to assist you. </h1>
+        </div>
+        <div class="flex cc">
+          <a href="contact.html" class="btn-primary black w-button">Contact us</a>
+        </div>
+      </div>
+    </div>
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="contact mini">
+        <div id="w-node-_79dee1a8-d0f0-7a60-ed80-5b292441a87c-cbbeb81c" class="contact-card-inner">
+          <h1 id="w-node-_79dee1a8-d0f0-7a60-ed80-5b292441a87d-cbbeb81c" class="heading-4">Colombo,<br>Sri Lanka.</h1>
+          <div class="w-layout-hflex contact-grid"><img src="images/location_on_icons.svg" loading="lazy" alt="" class="icon-24">
+            <div class="w-layout-vflex">
+              <div class="p">217B,Stanely Thilakerathne Mawatha,<br>Nugegoda 10250,<br>Sri Lanka.</div>
+            </div>
+          </div>
+          <div id="w-node-_79dee1a8-d0f0-7a60-ed80-5b292441a88c-cbbeb81c" class="contact-grid"><img src="images/call_icon.svg" loading="lazy" alt="" class="icon-24">
+            <div class="p">General<br>+94 11 281 2917<br></div>
+          </div>
+          <div id="w-node-_79dee1a8-d0f0-7a60-ed80-5b292441a899-cbbeb81c" class="contact-grid last"><img src="images/mail_icon.svg" loading="lazy" alt="" class="icon-24">
+            <div class="p">hello@revox.io</div>
+          </div>
+        </div>
+        <div id="w-node-_79dee1a8-d0f0-7a60-ed80-5b292441a89d-cbbeb81c" class="contact-card-inner">
+          <h1 id="w-node-_79dee1a8-d0f0-7a60-ed80-5b292441a89e-cbbeb81c" class="heading-4">Boston, <br>Massachusetts</h1>
+          <div class="w-layout-hflex contact-grid"><img src="images/location_on_icons.svg" loading="lazy" alt="" class="icon-24">
+            <div class="w-layout-vflex">
+              <div class="p">350 Huntington Avenue, <br>Boston, <br>Massachusetts 02115,<br>United States of America.</div>
+            </div>
+          </div>
+          <div id="w-node-_79dee1a8-d0f0-7a60-ed80-5b292441a8af-cbbeb81c" class="contact-grid"><img src="images/call_icon.svg" loading="lazy" alt="" class="icon-24">
+            <div class="p">General<br>+1 332 2424 298<br></div>
+          </div>
+          <div id="w-node-_79dee1a8-d0f0-7a60-ed80-5b292441a8bc-cbbeb81c" class="contact-grid last"><img src="images/mail_icon.svg" loading="lazy" alt="" class="icon-24">
+            <div class="p">hello@revox.io</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+			</main>
+			<Footer />
+		</div>
+		<style>
+			body{
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		</style>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import ProjectPost from "../../layouts/ProjectPost.astro"
+import client from "../../../tina/__generated__/client";
+import AdminProjectPost from "../../../tina/pages/AdminProjectPost";
+import '../../styles/blog.css';
+
+export async function getStaticPaths() {
+	const posts = await getCollection("project");
+
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: {
+			post,
+			getTinaProps: async () =>
+				client.queries.project({
+					relativePath: post.data.tinaInfo.relativePath,
+				}),
+		},
+	}));
+}
+
+const { post, getTinaProps } = Astro.props;
+const tinaProps = await getTinaProps();
+---
+
+<ProjectPost {...tinaProps}>
+		<AdminProjectPost {...tinaProps} client:tina/>
+</ProjectPost>

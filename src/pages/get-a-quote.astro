@@ -1,0 +1,193 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+const metadata = {
+  title: "Revox - We build software and games",
+  description:
+    "We are a Digital Product Game Development agency based in Colombo, Sri Lanka. We create disruptive change by crafting best-in-class digital products ventures.",
+};
+---
+
+<!doctype html>
+<html
+  data-wf-page="663a7cda172f810aa03f3ffe"
+  data-wf-site="65afaef75b2da61f9662587d"
+  lang="en"
+>
+  <head>
+    <BaseHead title={metadata.title} description={metadata.description} />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <Header />
+      <main class="main-wrapper">
+        <section class="bg-black p-60">
+          <div class="w-layout-blockcontainer container w-container">
+            <div class="w-layout-grid grid-7">
+              <div>
+                <h1 class="heading-3 text-white">
+                  We help ambitious entrepreneurs concept, craft and launch
+                  ideas across digital products<br /><br />Let’s shape something <br
+                  />great – together
+                </h1>
+                <div class="p text-white">
+                  To find out how we can help you, fill the bellow form. <br
+                  />For job opportunities, please visit our Careers Page
+                </div>
+                <a href="#" class="btn-text sm w-button">Goto Careers</a>
+              </div>
+              <div class="contact-form-wrapper-quote">
+                <div class="overline">Get a Quote</div>
+                <h4>
+                  Tell us a bit about your project or what you have in mind.
+                </h4>
+                <div class="p">
+                  Have a new project in mind? Send us your requirments or idea
+                  and we will get back to you with ways to make it come true. we
+                  will at the very least give you some great advice.
+                </div>
+                <div class="code-embed-2 w-embed">
+                  <!--  Change or deletion of the name attributes in the input tag will lead to empty values on record submission -->
+                  <form
+                    action="https://forms.zohopublic.com/support1973/form/Project/formperma/J7ZJLchOAfjmlQdzeWSTbt0RnaELZppXpBA9wMUTXUU/htmlRecords/submit"
+                    name="form"
+                    id="form"
+                    method="POST"
+                    accept-charset="UTF-8"
+                    enctype="multipart/form-data"
+                  >
+                    <input
+                      type="hidden"
+                      name="zf_referrer_name"
+                      value=""
+                    /><!--  To Track referrals , place the referrer name within the " " in the above hidden input field  -->
+                    <input
+                      type="hidden"
+                      name="zf_redirect_url"
+                      value=""
+                    /><!--  To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field  -->
+                    <input
+                      type="hidden"
+                      name="zc_gad"
+                      value=""
+                    /><!--  If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM  -->
+                    <h2>Project</h2>
+                    <p></p>
+                    <!-- Name -->
+                    <label> Name </label>
+                    <input
+                      type="text"
+                      maxlength="255"
+                      name="Name_First"
+                      fieldtype="7"
+                      placeholder=""
+                    />
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      maxlength="255"
+                      name="Name_Last"
+                      fieldtype="7"
+                      placeholder=""
+                    />
+                    <label>Last Name</label>
+                    <!-- Email -->
+                    <label>
+                      Email
+                      <em>*</em>
+                    </label>
+                    <input
+                      type="text"
+                      maxlength="255"
+                      name="Email"
+                      value=""
+                      fieldtype="9"
+                      placeholder=""
+                    />
+                    <!-- Multi Line -->
+                    <label>
+                      Tell us a bit about the project
+                      <em>*</em>
+                    </label>
+                    <textarea name="MultiLine" maxlength="65535" placeholder=""
+                    ></textarea>
+                    <p>Write a description about your project</p>
+                    <!-- Dropdown -->
+                    <label>
+                      Budget
+                      <em>*</em>
+                    </label>
+                    <select name="Dropdown">
+                      <option selected="true" value="-Select-"
+                        >Select your project budget</option
+                      >
+                      <option value="Under $10,000">Under &#x24;10,000</option>
+                      <option value="$10,000 - $30,000"
+                        >&#x24;10,000 - &#x24;30,000</option
+                      >
+                      <option value="$30,000 - $50,000"
+                        >&#x24;30,000 - &#x24;50,000</option
+                      >
+                      <option value="$50,000 - $100,000"
+                        >&#x24;50,000 - &#x24;100,000</option
+                      >
+                      <option value="$100,000 and above"
+                        >&#x24;100,000 and above</option
+                      >
+                    </select>
+                    <!-- Single Line -->
+                    <label> How did you get to know us? </label>
+                    <input
+                      type="text"
+                      name="SingleLine"
+                      value=""
+                      fieldtype="1"
+                      maxlength="255"
+                      placeholder=""
+                    />
+                    <button type="submit"><em>Submit</em></button>
+                  </form>
+                </div>
+                <div class="p small hint-text">
+                  Your data and information provided will not be disclosed to
+                  public. My data will be handled according to the Privacy
+                  Policy.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-embed">
+            <style>
+              input {
+                background-color: #fff;
+                border: 1px #000;
+                border-radius: 4px;
+                height: 52px;
+                margin-bottom: 5px;
+                padding-left: 14px;
+                padding-right: 14px;
+                font-family: Inter, sans-serif;
+                font-size: 16px;
+                box-shadow: 0 1px rgba(0, 0, 0, 0.15);
+                width: 100%;
+              }
+              label {
+                font-family: Inter, sans-serif;
+                font-size: 13px;
+                font-weight: 400;
+              }
+            </style>
+          </div>
+        </section>
+        <script
+          src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=65afaef75b2da61f9662587d"
+          type="text/javascript"
+          integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+          crossorigin="anonymous"></script>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
