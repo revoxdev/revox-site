@@ -44,6 +44,9 @@ export const NewsroomCollection: Collection = {
       label: "Featured Post",
       type: "boolean",
       description: "Mark this post as featured to display it prominently",
+      ui: {
+        component: "toggle",
+      },
     },
     {
       type: "rich-text",

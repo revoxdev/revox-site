@@ -7,164 +7,13 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import "../../styles/blog.css";
 
-const postss = (await getCollection("newsroom")).sort(
+const posts = (await getCollection("newsroom")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-// Hardcoded blog posts
-const hardcodedPosts = [
-  {
-    id: "featured-post",
-    data: {
-      title: "The Future of Technology: AI and Machine Learning Trends",
-      description:
-        "Explore the latest developments in artificial intelligence and machine learning that are shaping our digital future. From breakthrough algorithms to real-world applications.",
-      pubDate: new Date("2024-01-15"),
-      heroImage:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-      authors: [
-        {
-          name: "Dr. Sarah Chen",
-          designation: "AI Research Director",
-          avatar:
-            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-        },
-      ],
-      featured: true,
-    },
-  },
-  {
-    id: "post-2",
-    data: {
-      title: "Sustainable Development Goals: Progress Report 2024",
-      description:
-        "How do you scale a support organization without breaking the budget or killing the quality of the customer experience? From automation to smart suggestions, here’s how we have managed it, and how you can too.",
-      pubDate: new Date("2024-01-10"),
-      heroImage:
-        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=400&fit=crop",
-      authors: [
-        {
-          name: "Michael Rodriguez",
-          designation: "Sustainability Analyst",
-          avatar:
-            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-        },
-        {
-          name: "Sarah Kim",
-          designation: "Environmental Policy Expert",
-          avatar:
-            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-        },
-        {
-          name: "Michael Rodriguez",
-          designation: "Sustainability Analyst",
-          avatar:
-            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-        },
-      ],
-      featured: false,
-    },
-  },
-  {
-    id: "post-3",
-    data: {
-      title: "Digital Transformation in Healthcare",
-      description:
-        "How technology is revolutionizing patient care and medical research across the globe.",
-      pubDate: new Date("2024-01-08"),
-      heroImage:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-      authors: [
-        {
-          name: "Dr. Emily Johnson",
-          designation: "Healthcare Innovation Lead",
-          avatar:
-            "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-        },
-      ],
-      featured: false,
-    },
-  },
-  {
-    id: "post-4",
-    data: {
-      title: "Climate Change Solutions: Innovation and Action",
-      description:
-        "Innovative approaches and technologies being developed to combat climate change.",
-      pubDate: new Date("2024-01-05"),
-      heroImage:
-        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&h=400&fit=crop",
-      authors: [
-        {
-          name: "James Wilson",
-          designation: "Environmental Scientist",
-          avatar:
-            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-        },
-        {
-          name: "Maria Santos",
-          designation: "Climate Research Lead",
-          avatar:
-            "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-        },
-      ],
-      featured: false,
-    },
-  },
-  {
-    id: "post-5",
-    data: {
-      title: "The Rise of Remote Work Culture",
-      description:
-        "Examining how remote work has transformed business operations and employee productivity.",
-      pubDate: new Date("2024-01-03"),
-      heroImage:
-        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&h=400&fit=crop",
-      authors: [
-        {
-          name: "Lisa Thompson",
-          designation: "Remote Work Consultant",
-          avatar:
-            "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
-        },
-      ],
-      featured: false,
-    },
-  },
-  {
-    id: "post-6",
-    data: {
-      title: "Cybersecurity in the Modern Era",
-      description:
-        "Essential strategies for protecting digital assets in an increasingly connected world.",
-      pubDate: new Date("2024-01-01"),
-      heroImage:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop",
-      authors: [
-        {
-          name: "David Park",
-          designation: "Cybersecurity Expert",
-          avatar:
-            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
-        },
-        {
-          name: "Michael Rodriguez",
-          designation: "Sustainability Analyst",
-          avatar:
-            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-        },
-      ],
-      featured: false,
-    },
-  },
-];
-
-const posts = hardcodedPosts.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
-const featuredPost = posts.find((post) => post.data.featured);
-const regularPosts = posts.filter((post) => !post.data.featured);
+const featuredPosts = posts.filter((post) => post.data.featured);
+const featuredPost = featuredPosts[0]; // Take only the first featured post
+const regularPosts = posts.filter((post) => post !== featuredPost); // All other posts (including other featured ones)
 
 const metadata = {
   title: "News - Latest Updates and Announcements",
@@ -237,7 +86,7 @@ const metadata = {
                     set:html={featuredPost.data.description}
                   />
                   <div class="author-info">
-                    {featuredPost.data.authors.map((author) => (
+                    {featuredPost.data.authors?.map((author) => (
                       <div class="author-item">
                         <img
                           src={author.avatar}
@@ -292,7 +141,7 @@ const metadata = {
                       />
                     )}
                     <div class="author-info">
-                      {post.data.authors.map((author) => (
+                      {post.data.authors?.map((author) => (
                         <div class="author-item">
                           <img
                             src={author.avatar}
