@@ -64,6 +64,13 @@ const newsroom = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().nullish(),
+    featured: z.boolean().nullish(),
+    authors: z.array(z.object({
+      _template: z.string().optional(),
+      name: z.string(),
+      designation: z.string().optional(),
+      avatar: z.string().optional(),
+    })).optional(),
   }),
 });
 
