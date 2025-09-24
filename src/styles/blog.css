@@ -491,6 +491,7 @@ main {
 
 .featured-post-image {
   position: relative;
+  height: 580px;
   overflow: hidden;
 }
 
@@ -506,6 +507,7 @@ main {
   justify-content: flex-start;
   width: 395px;
   padding-right: 55px;
+  height: 580px;
 }
 
 .featured-post-date {
@@ -531,10 +533,8 @@ main {
   font-size: 16px;
   line-height: 26.3px;
   margin: 0 0 56px 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  height: calc(26.3px * 4);
+  overflow: visible;
 }
 
 .newsroom-container {
@@ -544,10 +544,11 @@ main {
 
 .newsroom-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
   gap: 45px;
   align-items: stretch;
   padding-right: 55px;
+  justify-content: start;
 }
 
 .newsroom-card {
@@ -583,7 +584,7 @@ main {
 
 .newsroom-card-image {
   position: relative;
-  min-height: 156.9618px;
+  height: 157px;
   overflow: hidden;
   background: #f8f9fa;
   margin-left: -16px;
@@ -627,7 +628,7 @@ main {
   color: #6c757d;
   font-size: 16px;
   line-height: 26.3px;
-  margin: 15px 0 0px 0;
+  margin: 15px 0 15px 0;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -659,6 +660,7 @@ main {
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  background-color: #c2c2c2;
 }
 
 .author-details {
