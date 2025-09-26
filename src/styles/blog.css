@@ -817,12 +817,13 @@ main {
 
 .featured-author-card {
   background: #fff;
-  padding: 0px 30px;
+  padding: 0px 24px;
   transition: all 0.3s ease;
   position: relative;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+  min-width: 0;
 }
 
 .featured-author-card:not(:last-child)::after {
@@ -851,15 +852,20 @@ main {
 .featured-author-info {
   text-align: left;
   flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .featured-author-name {
   color: #0f1219;
   font-size: 18px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 22px;
   margin: 0 0 8px 0;
   font-family: "Patron", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .featured-author-designation {
@@ -870,6 +876,9 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-family: "Patron", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Responsive adjustments for featured authors */
@@ -910,21 +919,11 @@ main {
   }
 
   .featured-author-card {
-    padding: 12px 17px;
+    padding: 17px 0px;
   }
 
-  .featured-author-card::after {
-    display: none;
-  }
-
-  .featured-author-card:not(:last-child)::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 25px;
-    right: 25px;
-    height: 1px;
-    background-color: #e5e7eb;
+  .featured-author-card {
+    border-bottom: 1px solid #e5e7eb;
   }
 
   .featured-author-avatar {
@@ -934,9 +933,30 @@ main {
 
   .featured-author-name {
     font-size: 18px;
-    line-height: 16px;
+    line-height: 22px;
     font-weight: 400;
     font-family: "Patron", sans-serif;
     margin-bottom: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .featured-author-designation {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .featured-author-card:nth-child(2)::after {
+    display: none;
+  }
+
+  .featured-author-card:nth-child(3)::before,
+  .featured-author-card:nth-child(4)::before {
+    display: none;
+  }
+
+  .featured-author-card:not(:last-child)::after {
+    display: none;
   }
 }
