@@ -1,0 +1,400 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: "Patron";
+  src: url("/fonts/Patron-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patron";
+  src: url("/fonts/Patron-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patron";
+  src: url("/fonts/Patron-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patron";
+  src: url("/fonts/Patron-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TestTiempos";
+  src: url("/fonts/TestTiemposText-Regular-BF66457a50cd521.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TestTiempos";
+  src: url("/fonts/TestTiemposText-RegularItalic-BF66457a50421c2.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TestTiempos";
+  src: url("/fonts/TestTiemposText-Medium-BF66457a508489a.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TestTiempos";
+  src: url("/fonts/TestTiemposText-MediumItalic-BF66457a508d6d9.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TestTiempos";
+  src: url("/fonts/TestTiemposText-Semibold-BF66457a4fed201.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TestTiempos";
+  src: url("/fonts/TestTiemposText-SemiboldItalic-BF66457a505477c.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TestTiempos";
+  src: url("/fonts/TestTiemposText-Bold-BF66457a4f03c40.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TestTiempos";
+  src: url("/fonts/TestTiemposText-BoldItalic-BF66457a50155b4.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Blog Detail Page Styles */
+
+/* Article Container */
+.blog-detail-page {
+  width: 80rem !important;
+  max-width: calc(100% - 15px) !important;
+  margin: auto;
+
+  /* Hero Image Styles */
+  .hero-image {
+    height: 560px;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  /* Content Container */
+  .prose-wrapper-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 278px;
+    gap: 60px;
+    padding-top: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .prose {
+    width: 100% !important;
+  }
+
+  /* Hide author info in prose on desktop */
+  .prose .author-info-view {
+    display: none;
+  }
+
+  /* Author Sidebar */
+  .author-sidebar {
+    width: 278px;
+    align-self: start;
+  }
+
+  .author-info-view {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: auto;
+  }
+
+  .author-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .author-details {
+    flex: 1;
+    gap: 6px;
+  }
+
+  .author-name {
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: #242424;
+    font-family: "Patron", sans-serif;
+  }
+
+  .author-designation {
+    font-size: 14px;
+    line-height: 20px;
+    color: #242424;
+    margin-bottom: 0px;
+    letter-spacing: -0.05px;
+    font-family: "Patron", sans-serif;
+  }
+
+  .author-bio {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #495057;
+  }
+  .title {
+    font-size: 50px;
+    line-height: 64px;
+    color: #242424;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+  }
+
+  /* TinaMarkdown paragraph styles */
+  .blog-content p {
+    font-size: 18px !important;
+    line-height: 34px !important;
+    font-weight: 400 !important;
+    margin: 30px 0px !important;
+    letter-spacing: -0.054px !important;
+    font-family: "TestTiempos", serif !important;
+  }
+
+  /* TinaMarkdown h3 styles */
+  .blog-content h3 {
+    font-size: 30px !important;
+    line-height: 42px !important;
+    font-weight: 400 !important;
+    margin: 22px 0 12px 0 !important;
+    letter-spacing: -0.6px !important;
+    font-family: "Patron", sans-serif !important;
+  }
+
+  .blog-content h2 {
+    font-size: 34px !important;
+    line-height: 45px !important;
+    font-weight: 500 !important;
+    margin: 45px 0 12px 0 !important;
+    font-family: "Patron", sans-serif !important;
+  }
+
+  .blog-content h1 {
+    font-size: 48px !important;
+    line-height: 62px !important;
+    font-weight: 400 !important;
+    margin: 16px 0 8px 0 !important;
+    font-family: "Patron", sans-serif !important;
+  }
+
+  .blog-content h4 {
+    font-size: 24px !important;
+    line-height: normal !important;
+    font-weight: 400 !important;
+    margin: 16px 0 8px 0 !important;
+    letter-spacing: -0.85px !important;
+    font-family: "Patron", sans-serif !important;
+  }
+
+  .blog-content h5 {
+    font-size: 20px !important;
+    line-height: 28px !important;
+    font-weight: 400 !important;
+    margin: 16px 0 8px 0 !important;
+    letter-spacing: -0.3px !important;
+    font-family: "Patron", sans-serif !important;
+  }
+
+  .blog-content h6 {
+    font-size: 18px !important;
+    line-height: 16px !important;
+    font-weight: 400 !important;
+    margin: 16px 0 8px 0 !important;
+    letter-spacing: -0.36px !important;
+    font-family: "Patron", sans-serif !important;
+  }
+
+  .blog-content img {
+    margin: 20px 0 !important;
+    border-radius: 0px !important;
+  }
+  .blog-content li {
+    margin: 0px 0px 20px 0px !important;
+    border-radius: 0px !important;
+  }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+  .blog-detail-page {
+    /* Article Container */
+
+    width: 90rem !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+
+    /* Hero Image Styles */
+    .hero-image {
+      max-height: 184px;
+      height: 184px;
+    }
+
+    /* Content Container - Stack vertically on mobile */
+    .prose-wrapper-with-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-top: 21px;
+      padding-left: 23px;
+      padding-right: 23px;
+    }
+
+    /* Author Sidebar - Hide on mobile */
+    .author-sidebar {
+      display: none;
+    }
+
+    .prose {
+      order: 1;
+    }
+
+    /* Show author info in prose section on mobile, below title */
+    .prose .author-info-view {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin: 26px 0 50px 0;
+      order: 2;
+    }
+
+    .prose .author-details {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e0e0e0;
+      flex: 1;
+    }
+
+    .author-info-view {
+      justify-content: flex-start;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Typography adjustments for mobile */
+    .title {
+      font-size: 24px !important;
+      line-height: 30px !important;
+      letter-spacing: 0.12px !important;
+    }
+
+    .blog-content h1 {
+      font-size: 28px !important;
+      line-height: 36px !important;
+      font-family: "Patron", sans-serif !important;
+    }
+
+    .blog-content h2 {
+      font-size: 26px !important;
+      line-height: 33px !important;
+      font-family: "Patron", sans-serif !important;
+    }
+
+    .blog-content h3 {
+      font-size: 24px !important;
+      line-height: 30px !important;
+      letter-spacing: -0.12px !important;
+      font-family: "Patron", sans-serif !important;
+    }
+
+    .blog-content h4 {
+      font-size: 22px !important;
+      line-height: 33px !important;
+      letter-spacing: -0.56px !important;
+      font-family: "Patron", sans-serif !important;
+    }
+
+    .blog-content h5 {
+      font-size: 20px !important;
+      line-height: 30px !important;
+      letter-spacing: -0.8px !important;
+      font-family: "Patron", sans-serif !important;
+    }
+
+    .blog-content h6 {
+      font-size: 18px !important;
+      line-height: 16px !important;
+      letter-spacing: -0.36px !important;
+      font-family: "Patron", sans-serif !important;
+    }
+
+    .blog-content p {
+      font-size: 16px !important;
+      line-height: 28px !important;
+      margin: 20px 0px !important;
+      font-family: "TestTiempos", serif !important;
+    }
+
+    .author-name {
+      font-size: 16px !important;
+      line-height: 20px !important;
+      font-family: "Patron", sans-serif !important;
+    }
+
+    .author-designation {
+      font-size: 13px !important;
+      line-height: 18px !important;
+      font-family: "Patron", sans-serif !important;
+    }
+  }
+}
