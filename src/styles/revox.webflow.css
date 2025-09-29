@@ -718,7 +718,7 @@ p {
   text-align: left;
   letter-spacing: -0.2px;
   font-family: Patron, sans-serif;
-  font-size: 5em;
+  font-size: 5em !important;
   font-weight: 400;
   line-height: 1em;
 }
@@ -775,7 +775,7 @@ p {
   margin-bottom: 5px;
   padding-bottom: 0;
   font-family: Patron, sans-serif;
-  font-size: 5em;
+  font-size: 5em !important;
   font-weight: 400;
   line-height: 1.4;
   position: absolute;
@@ -3920,9 +3920,9 @@ p {
 }
 
 @media screen and (min-width: 1280px) {
-  body {
+  /* body {
     font-size: 1vw;
-  }
+  } */
 
   .container {
     width: auto;
