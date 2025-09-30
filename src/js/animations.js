@@ -2,7 +2,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Splide } from "@splidejs/splide";
-import $ from "jquery";
 import "slick-carousel";
 
 // Register GSAP plugins
