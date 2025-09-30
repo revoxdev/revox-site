@@ -2,7 +2,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Splide } from "@splidejs/splide";
-import "slick-carousel";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -143,8 +142,8 @@ $(document).ready(function () {
       focusOnSelect: true,
       pauseOnFocus: false,
       pauseOnHover: false,
-      prevArrow: $(".slide-prev"),
-      nextArrow: $(".slide-next"),
+      prevArrow: $(".slide-prev.desktop-arrow"),
+      nextArrow: $(".slide-next.desktop-arrow"),
     });
 
     var Timer = setInterval(function () {
