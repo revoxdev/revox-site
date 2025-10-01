@@ -640,8 +640,6 @@ main {
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .newsroom-card::after {
@@ -836,10 +834,6 @@ main {
   background-color: #e5e7eb;
 }
 
-.featured-author-card:hover {
-  background-color: #f8f9fa;
-}
-
 .featured-author-avatar {
   width: 92px;
   height: 92px;
@@ -863,22 +857,22 @@ main {
   line-height: 22px;
   margin: 0 0 8px 0;
   font-family: "Patron", sans-serif;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  letter-spacing: 0.09px;
+  text-transform: uppercase;
 }
 
 .featured-author-designation {
-  color: #6c757d;
+  color: #242424;
   font-size: 15px;
   font-weight: 400;
   line-height: 20.7px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.5px;
   font-family: "Patron", sans-serif;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Responsive adjustments for featured authors */
@@ -940,6 +934,8 @@ main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    letter-spacing: 0.09px;
+    text-transform: uppercase;
   }
 
   .featured-author-designation {
