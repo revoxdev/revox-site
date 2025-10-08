@@ -33,7 +33,8 @@
 
 @font-face {
   font-family: "TestTiempos";
-  src: url("/fonts/TestTiemposText-Regular-BF66457a50cd521.otf") format("opentype");
+  src: url("/fonts/TestTiemposText-Regular-BF66457a50cd521.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -41,7 +42,8 @@
 
 @font-face {
   font-family: "TestTiempos";
-  src: url("/fonts/TestTiemposText-RegularItalic-BF66457a50421c2.otf") format("opentype");
+  src: url("/fonts/TestTiemposText-RegularItalic-BF66457a50421c2.otf")
+    format("opentype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -49,7 +51,8 @@
 
 @font-face {
   font-family: "TestTiempos";
-  src: url("/fonts/TestTiemposText-Medium-BF66457a508489a.otf") format("opentype");
+  src: url("/fonts/TestTiemposText-Medium-BF66457a508489a.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -57,7 +60,8 @@
 
 @font-face {
   font-family: "TestTiempos";
-  src: url("/fonts/TestTiemposText-MediumItalic-BF66457a508d6d9.otf") format("opentype");
+  src: url("/fonts/TestTiemposText-MediumItalic-BF66457a508d6d9.otf")
+    format("opentype");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -65,7 +69,8 @@
 
 @font-face {
   font-family: "TestTiempos";
-  src: url("/fonts/TestTiemposText-Semibold-BF66457a4fed201.otf") format("opentype");
+  src: url("/fonts/TestTiemposText-Semibold-BF66457a4fed201.otf")
+    format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -73,7 +78,8 @@
 
 @font-face {
   font-family: "TestTiempos";
-  src: url("/fonts/TestTiemposText-SemiboldItalic-BF66457a505477c.otf") format("opentype");
+  src: url("/fonts/TestTiemposText-SemiboldItalic-BF66457a505477c.otf")
+    format("opentype");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -89,7 +95,8 @@
 
 @font-face {
   font-family: "TestTiempos";
-  src: url("/fonts/TestTiemposText-BoldItalic-BF66457a50155b4.otf") format("opentype");
+  src: url("/fonts/TestTiemposText-BoldItalic-BF66457a50155b4.otf")
+    format("opentype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -121,7 +128,7 @@
     display: grid;
     grid-template-columns: 1fr 278px;
     gap: 60px;
-    padding-top: 40px;
+    padding-top: 45px;
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 24px;
@@ -169,16 +176,17 @@
     gap: 6px;
   }
 
-  .author-name {
-    font-size: 18px;
+  .author-name-details {
+    font-size: 14px;
     line-height: 16px;
     font-weight: 400;
     margin-bottom: 0px;
     color: #242424;
     font-family: "Patron", sans-serif;
+    text-transform: uppercase;
   }
 
-  .author-designation {
+  .author-designation-details {
     font-size: 14px;
     line-height: 20px;
     color: #242424;
@@ -196,8 +204,10 @@
     font-size: 50px;
     line-height: 64px;
     color: #242424;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.6px;
     font-weight: 500;
+    font-family: "Patron", sans-serif;
+    margin-bottom: 52px;
   }
 
   /* TinaMarkdown paragraph styles */
@@ -208,6 +218,10 @@
     margin: 30px 0px !important;
     letter-spacing: -0.054px !important;
     font-family: "TestTiempos", serif !important;
+  }
+
+  .blog-content p:first-child {
+    margin-top: 0px !important;
   }
 
   /* TinaMarkdown h3 styles */
@@ -293,7 +307,7 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
-      padding-top: 21px;
+      padding-top: 24px;
       padding-left: 23px;
       padding-right: 23px;
     }
@@ -311,7 +325,7 @@
     .prose .author-info-view {
       display: flex;
       flex-direction: row;
-      gap: 20px;
+      gap: 9px;
       margin: 26px 0 50px 0;
       order: 2;
     }
@@ -336,6 +350,7 @@
       font-size: 24px !important;
       line-height: 30px !important;
       letter-spacing: 0.12px !important;
+      margin-bottom: 30px !important;
     }
 
     .blog-content h1 {

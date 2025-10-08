@@ -73,7 +73,10 @@ export default function AdminNewsroomPost(props: Props) {
                 </>
               )}
           </div>
-          <div className="blog-content" data-tina-field={tinaField(newsroom, "body")}>
+          <div
+            className="blog-content"
+            data-tina-field={tinaField(newsroom, "body")}
+          >
             <TinaMarkdown content={newsroom.body} />
           </div>
         </div>
@@ -93,13 +96,13 @@ export default function AdminNewsroomPost(props: Props) {
                   </div>
                   <div className="author-details">
                     <span
-                      className="author-name"
+                      className="author-name-details"
                       data-tina-field={tinaField(newsroom.authors[0], "name")}
                     >
                       {newsroom.authors[0].name}
                     </span>
                     <span
-                      className="author-designation"
+                      className="author-designation-details"
                       data-tina-field={tinaField(
                         newsroom.authors[0],
                         "designation"
